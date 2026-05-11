@@ -12,7 +12,6 @@ import { useState } from "react";
 
 function Register() {
 
-  // Estado mostrar contraseña
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -29,7 +28,6 @@ function Register() {
 >
       <div className="w-full max-w-md">
 
-        {/* Logo */}
         <div className="flex justify-center mb-6">
 
           <div className="w-28 h-28 rounded-3xl bg-zinc-900 border border-zinc-800 flex items-center justify-center overflow-hidden shadow-lg">
@@ -44,7 +42,6 @@ function Register() {
 
         </div>
 
-        {/* Título */}
         <h1 className="text-white text-5xl font-bold text-center mb-3">
           Crear cuenta
         </h1>
@@ -53,7 +50,7 @@ function Register() {
           Regístrate para continuar
         </p>
 
-        {/* Nombre */}
+
         <div className="relative mb-4">
 
           <User
@@ -80,7 +77,6 @@ function Register() {
 
         </div>
 
-        {/* Correo */}
         <div className="relative mb-4">
 
           <Mail
@@ -107,7 +103,6 @@ function Register() {
 
         </div>
 
-        {/* Contraseña */}
         <div className="relative mb-6">
 
           <Lock
@@ -135,7 +130,6 @@ function Register() {
             "
           />
 
-          {/* Botón ojo */}
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
@@ -158,7 +152,6 @@ function Register() {
 
         </div>
 
-        {/* Botón register */}
         <button
           className="
             w-full
@@ -175,7 +168,6 @@ function Register() {
           Registrarse
         </button>
 
-        {/* Separador */}
         <div className="flex items-center mb-8">
 
           <div className="flex-1 h-px bg-zinc-700"></div>
@@ -188,7 +180,6 @@ function Register() {
 
         </div>
 
-        {/* Google */}
         <button
           className="
             w-full
