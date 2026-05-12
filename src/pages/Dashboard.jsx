@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
+  Activity,
+  Bell,
   LayoutDashboard,
-  Trophy,
-  Users,
   Settings,
   Timer,
-  Activity,
+  Trophy,
+  Users,
   Wifi,
-  Bell,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -49,6 +49,12 @@ function Dashboard() {
       navigate("/Profile");
     }, 250);
   };
+  const handleparticipanteProfile =() =>{
+    setAnimating(true);
+    setTimeout(() => {
+      navigate("/participanteProfile");
+    }, 250);
+  }
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -457,7 +463,9 @@ function Dashboard() {
               </thead>
 
               <tbody>
-                <tr className="border-b border-zinc-800 hover:bg-zinc-800/40 transition">
+                <tr 
+                onClick={handleparticipanteProfile}
+                className="border-b border-zinc-800 hover:bg-zinc-800/40 transition">
                   <td className="py-5">
                     <div className="flex items-center gap-4">
                       <div
@@ -521,7 +529,9 @@ function Dashboard() {
                   </td>
                 </tr>
 
-                <tr className="hover:bg-zinc-800/40 transition">
+                <tr 
+                onClick={handleparticipanteProfile}
+                className="hover:bg-zinc-800/40 transition">
                   <td className="py-5">
                     <div className="flex items-center gap-4">
                       <div

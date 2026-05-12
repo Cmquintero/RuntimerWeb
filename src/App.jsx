@@ -1,19 +1,20 @@
 import {
   BrowserRouter,
-  Routes,
   Route,
+  Routes,
   useLocation,
 } from "react-router-dom";
 
 import { AnimatePresence } from "framer-motion";
 
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Dashboard from "./pages/Dashboard";
-import Results from "./pages/Results";
 import Competitions from "./pages/Competitions";
-import Settings from "./pages/Settings.jsx";
+import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
+import ParticipantProfile from "./pages/ParticipantProfile.jsx";
 import Profile from "./pages/Profile.jsx";
+import Register from "./pages/Register";
+import Results from "./pages/Results";
+import Settings from "./pages/Settings.jsx";
 
 function AnimatedRoutes() {
 
@@ -30,6 +31,7 @@ function AnimatedRoutes() {
         <Route path="/competitions" element={<Competitions />} />
         <Route path="/Settings" element={<Settings />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/participanteProfile" element={<ParticipantProfile />} />
       </Routes>
 
     </AnimatePresence>
